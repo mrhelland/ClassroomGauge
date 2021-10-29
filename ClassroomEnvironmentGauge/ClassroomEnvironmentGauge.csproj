@@ -60,6 +60,12 @@
     <Compile Include="GaugeControl.Designer.cs">
       <DependentUpon>GaugeControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="WeeklyView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WeeklyView.Designer.cs">
+      <DependentUpon>WeeklyView.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -75,6 +81,9 @@
     </Compile>
     <EmbeddedResource Include="GaugeControl.resx">
       <DependentUpon>GaugeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeeklyView.resx">
+      <DependentUpon>WeeklyView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
