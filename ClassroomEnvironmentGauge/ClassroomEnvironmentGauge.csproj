@@ -90,45 +90,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\0001.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\0002.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\0003.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\0004.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\0005.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\0006.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\0007.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\0008.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\0009.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\0010.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\0011.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\0012.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\0057.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\0058.png" />
   </ItemGroup>
   <ItemGroup>
@@ -196,6 +157,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\0080.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0004.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0005.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0006.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0007.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0008.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0009.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0010.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0012.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\0013.png" />
@@ -328,6 +325,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\0056.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0057.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
