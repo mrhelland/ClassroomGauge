@@ -54,6 +54,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GaugeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GaugeControl.Designer.cs">
+      <DependentUpon>GaugeControl.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -65,7 +71,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="GaugeControl.resx">
+      <DependentUpon>GaugeControl.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -78,6 +88,246 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0004.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0005.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0006.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0007.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0008.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0009.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0010.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0012.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0057.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0058.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0059.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0060.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0061.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0062.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0063.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0064.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0065.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0066.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0067.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0068.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0069.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0070.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0071.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0072.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0073.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0074.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0075.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0076.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0077.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0078.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0079.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0080.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0013.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0014.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0015.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0016.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0017.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0018.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0019.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0020.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0021.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0022.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0023.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0024.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0025.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0026.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0027.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0028.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0029.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0030.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0031.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0032.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0033.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0034.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0035.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0036.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0037.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0038.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0039.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0040.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0041.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0042.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0043.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0044.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0045.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0046.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0047.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0048.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0049.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0050.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0051.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0052.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0053.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0054.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0055.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0056.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
