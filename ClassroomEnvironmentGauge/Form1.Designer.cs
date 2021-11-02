@@ -23,9 +23,18 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.gaugeControl1 = new ClassroomEnvironmentGauge.GaugeControl();
             this.weeklyView1 = new ClassroomEnvironmentGauge.WeeklyView();
+            this.gaugeControl1 = new ClassroomEnvironmentGauge.GaugeControl();
             this.SuspendLayout();
+            // 
+            // weeklyView1
+            // 
+            this.weeklyView1.BackColor = System.Drawing.Color.Transparent;
+            this.weeklyView1.Location = new System.Drawing.Point(854, 196);
+            this.weeklyView1.MinimumSize = new System.Drawing.Size(150, 0);
+            this.weeklyView1.Name = "weeklyView1";
+            this.weeklyView1.Size = new System.Drawing.Size(183, 393);
+            this.weeklyView1.TabIndex = 1;
             // 
             // gaugeControl1
             // 
@@ -34,22 +43,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gaugeControl1.BackColor = System.Drawing.Color.Transparent;
             this.gaugeControl1.ImageCount = 80;
-            this.gaugeControl1.Location = new System.Drawing.Point(12, 12);
+            this.gaugeControl1.Location = new System.Drawing.Point(12, 196);
             this.gaugeControl1.MaxValue = 100F;
             this.gaugeControl1.MinValue = 0F;
             this.gaugeControl1.Name = "gaugeControl1";
-            this.gaugeControl1.Size = new System.Drawing.Size(795, 409);
+            this.gaugeControl1.Size = new System.Drawing.Size(795, 393);
             this.gaugeControl1.TabIndex = 0;
             this.gaugeControl1.Value = 100F;
-            // 
-            // weeklyView1
-            // 
-            this.weeklyView1.BackColor = System.Drawing.Color.Transparent;
-            this.weeklyView1.Location = new System.Drawing.Point(897, 28);
-            this.weeklyView1.MinimumSize = new System.Drawing.Size(150, 0);
-            this.weeklyView1.Name = "weeklyView1";
-            this.weeklyView1.Size = new System.Drawing.Size(150, 393);
-            this.weeklyView1.TabIndex = 1;
             // 
             // Form1
             // 
