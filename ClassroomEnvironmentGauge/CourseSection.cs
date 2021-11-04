@@ -10,10 +10,18 @@ namespace ClassroomEnvironmentGauge {
         private int period;
         private string name;
 
+        public int Period {
+            get => period;
+        }
+        public string Name {
+            get => name;
+        }
+
         public CourseSection(int period, string coursename) {
             this.name = coursename;
             this.period = period;
         }
+
 
         public static List<CourseSection> GetCourses() {
             StringCollection courseList = Properties.Settings.Default.CourseList;
@@ -27,6 +35,10 @@ namespace ClassroomEnvironmentGauge {
                 }
             }
             return sections;
+        }
+
+        public override string ToString() {
+            return "Per " + period.ToString() + " - " + name;
         }
     }
 }
