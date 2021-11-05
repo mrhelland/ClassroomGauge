@@ -61,11 +61,14 @@ namespace ClassroomEnvironmentGauge {
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dailyView1.BackColor = System.Drawing.Color.Transparent;
+            this.dailyView1.Date = new System.DateTime(((long)(0)));
+            this.dailyView1.Enabled = false;
             this.dailyView1.Location = new System.Drawing.Point(3, 3);
             this.dailyView1.MinimumSize = new System.Drawing.Size(250, 125);
             this.dailyView1.Name = "dailyView1";
             this.dailyView1.Size = new System.Drawing.Size(250, 125);
             this.dailyView1.TabIndex = 0;
+            this.dailyView1.Value = 100F;
             // 
             // dailyView2
             // 
@@ -73,11 +76,14 @@ namespace ClassroomEnvironmentGauge {
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dailyView2.BackColor = System.Drawing.Color.Transparent;
+            this.dailyView2.Date = new System.DateTime(((long)(0)));
+            this.dailyView2.Enabled = false;
             this.dailyView2.Location = new System.Drawing.Point(3, 123);
             this.dailyView2.MinimumSize = new System.Drawing.Size(250, 125);
             this.dailyView2.Name = "dailyView2";
             this.dailyView2.Size = new System.Drawing.Size(250, 125);
             this.dailyView2.TabIndex = 1;
+            this.dailyView2.Value = 100F;
             // 
             // dailyView3
             // 
@@ -85,11 +91,14 @@ namespace ClassroomEnvironmentGauge {
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dailyView3.BackColor = System.Drawing.Color.Transparent;
+            this.dailyView3.Date = new System.DateTime(((long)(0)));
+            this.dailyView3.Enabled = false;
             this.dailyView3.Location = new System.Drawing.Point(3, 243);
             this.dailyView3.MinimumSize = new System.Drawing.Size(250, 125);
             this.dailyView3.Name = "dailyView3";
             this.dailyView3.Size = new System.Drawing.Size(250, 125);
             this.dailyView3.TabIndex = 2;
+            this.dailyView3.Value = 100F;
             // 
             // dailyView4
             // 
@@ -97,11 +106,14 @@ namespace ClassroomEnvironmentGauge {
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dailyView4.BackColor = System.Drawing.Color.Transparent;
+            this.dailyView4.Date = new System.DateTime(((long)(0)));
+            this.dailyView4.Enabled = false;
             this.dailyView4.Location = new System.Drawing.Point(3, 363);
             this.dailyView4.MinimumSize = new System.Drawing.Size(250, 125);
             this.dailyView4.Name = "dailyView4";
             this.dailyView4.Size = new System.Drawing.Size(250, 125);
             this.dailyView4.TabIndex = 3;
+            this.dailyView4.Value = 100F;
             // 
             // dailyView5
             // 
@@ -109,11 +121,14 @@ namespace ClassroomEnvironmentGauge {
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dailyView5.BackColor = System.Drawing.Color.Transparent;
+            this.dailyView5.Date = new System.DateTime(((long)(0)));
+            this.dailyView5.Enabled = false;
             this.dailyView5.Location = new System.Drawing.Point(3, 483);
             this.dailyView5.MinimumSize = new System.Drawing.Size(250, 125);
             this.dailyView5.Name = "dailyView5";
             this.dailyView5.Size = new System.Drawing.Size(250, 125);
             this.dailyView5.TabIndex = 4;
+            this.dailyView5.Value = 100F;
             // 
             // WeeklyView
             // 
