@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace ClassroomEnvironmentGauge {
 
     [System.Configuration.SettingsSerializeAs(System.Configuration.SettingsSerializeAs.Xml)]
-    class Observation {
+    public class Observation {
 
         private string description;
         public string Description {

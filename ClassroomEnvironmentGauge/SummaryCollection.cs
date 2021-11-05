@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassroomEnvironmentGauge {
 
-    [System.Configuration.SettingsSerializeAs(System.Configuration.SettingsSerializeAs.Xml)]
+    [Obsolete()]
     public class SummaryCollection {
 
         private List<WeeklySummary> weeklySummaries;
@@ -17,6 +17,10 @@ namespace ClassroomEnvironmentGauge {
 
         public SummaryCollection() {
             this.weeklySummaries = new List<WeeklySummary>();
+        }
+
+        public void AddSummary() {
+            
         }
 
 

@@ -42,16 +42,5 @@ namespace ClassroomEnvironmentGauge.Properties {
                 this["CourseList"] = value;
             }
         }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::ClassroomEnvironmentGauge.WeeklySummary WeeklySummary {
-            get {
-                return ((global::ClassroomEnvironmentGauge.WeeklySummary)(this["WeeklySummary"]));
-            }
-            set {
-                this["WeeklySummary"] = value;
-            }
-        }
     }
 }

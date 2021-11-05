@@ -15,7 +15,19 @@ namespace ClassroomEnvironmentGauge {
         private DateTime date;
         public DateTime Date {
             get => date;
-            set => date = value;
+            set {
+                date = value;
+                UpdateView();
+            }         
+        }
+
+        private DailySummary summary;
+        public DailySummary Summary {
+            get => summary;
+            set {
+                summary = value;
+                UpdateView();
+            }
         }
 
         public new bool Enabled {
@@ -25,10 +37,6 @@ namespace ClassroomEnvironmentGauge {
             }
         }
 
-        public float Value {
-            get => ctrlGauge.Value;
-            set => ctrlGauge.Value = value;
-        }
 
         public DailyView() {
             InitializeComponent();
@@ -44,7 +52,13 @@ namespace ClassroomEnvironmentGauge {
                 lblDayOfWeek.Text = "--";
             } else {
                 lblDate.Text = date.Date.ToString();
-                lblDayOfWeek.Text = date.DayOfWeek.ToString();
+                lblDayOfWeek.Text = date.DayLetter();
+            }
+            if(summary == null) {
+                ctrlGauge.Enabled = false;
+            } else {
+                ctrlGauge.Enabled = true;
+                ctrlGauge.Value = summary.GetTotalValue();
             }
         }
 

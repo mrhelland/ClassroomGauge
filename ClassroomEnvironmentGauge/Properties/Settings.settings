@@ -13,8 +13,5 @@
   &lt;string&gt;7|Introduction to Computer Science&lt;/string&gt;
 &lt;/ArrayOfString&gt;</Value>
     </Setting>
-    <Setting Name="WeeklySummary" Type="ClassroomEnvironmentGauge.WeeklySummary" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
   </Settings>
 </SettingsFile>
