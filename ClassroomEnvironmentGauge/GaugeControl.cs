@@ -48,6 +48,16 @@ namespace ClassroomEnvironmentGauge {
             }
         }
 
+        public new bool Enabled {
+            get {
+                return base.Enabled;
+            }
+            set {
+                base.Enabled = value;
+                UpdateImage();
+            }
+        }
+
 
         private int imageIndex = 0;
         private float value = 100;
