@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Xml.Serialization;
-using System.Threading.Tasks;
-using System.IO;
+
 
 namespace ClassroomEnvironmentGauge {
 
@@ -31,9 +29,11 @@ namespace ClassroomEnvironmentGauge {
 
         public WeeklySummary() {
             dailySummaries = new SortedList<DateTime, DailySummary>();
+            startDate = DateTime.MinValue;
         }
 
-        public WeeklySummary(DateTime includes) {
+        public WeeklySummary(DateTime includes, CourseSection course) {
+            this.courseSection = course;
             DateTime currentday = includes.StartOfWeek(DayOfWeek.Monday);
             for(int i = 0; i < 5; i++) {
                 dailySummaries.Add(currentday, new DailySummary());
@@ -41,19 +41,24 @@ namespace ClassroomEnvironmentGauge {
             }
         }
 
-        public void Save(FileInfo f) {
-            // Insert code to set properties and fields of the object.  
-            XmlSerializer serializer = new XmlSerializer(typeof(WeeklySummary));
-            // To write to a file, create a StreamWriter object.  
-            StreamWriter writer = new StreamWriter("myFileName.xml");
-            serializer.Serialize(writer, this);
-            writer.Close();
+        public override string ToString() {
+            return courseSection.ToString() + " - Week of " + startDate.ToShortDateString();
         }
 
-        public static WeeklySummary Load(FileInfo f) {
-            XmlSerializer serializer = new XmlSerializer(typeof(WeeklySummary));
-            FileStream stream = new FileStream(f.FullName, FileMode.Open);
-            return (WeeklySummary)serializer.Deserialize(stream);
+        public override bool Equals(object obj) {
+            WeeklySummary ws = obj as WeeklySummary;
+            if(ws != null) {
+                if(ws.startDate == this.startDate && ws.courseSection.Equals(this.courseSection)) {
+                    return true;
+                }
+            }
+            return false;
         }
+
+        public override int GetHashCode() {
+            return this.ToString().GetHashCode();
+        }
+
+
     }
 }

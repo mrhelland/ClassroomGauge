@@ -7,18 +7,31 @@ using System.Threading.Tasks;
 
 namespace ClassroomEnvironmentGauge {
     public class CourseSection {
-        private int period;
+        
         private string name;
-
-        public int Period {
-            get => period;
-        }
         public string Name {
             get => name;
+            set {
+                if(value != null)
+                    name = value.Trim();
+                else
+                    name = value;
+            }
+        }
+
+        private int period;
+        public int Period {
+            get => period;
+            set => period = value;
+        }
+
+        public CourseSection() {
+            this.name = "undefined";
+            this.period = 0;
         }
 
         public CourseSection(int period, string coursename) {
-            this.name = coursename;
+            this.name = coursename.Trim();
             this.period = period;
         }
 
@@ -39,6 +52,20 @@ namespace ClassroomEnvironmentGauge {
 
         public override string ToString() {
             return "Per " + period.ToString() + " - " + name;
+        }
+
+        public override int GetHashCode() {
+            return (period.ToString() + name.ToLower().Trim()).GetHashCode();
+        }
+
+        public override bool Equals(object obj) {
+            CourseSection cs = obj as CourseSection;
+            if(cs != null) {
+                if(this.name.ToLower().Equals(cs.name.ToLower()) && this.period == cs.period) {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

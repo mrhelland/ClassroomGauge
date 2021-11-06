@@ -70,7 +70,7 @@
       <DependentUpon>GaugeControl.cs</DependentUpon>
     </Compile>
     <Compile Include="DailySummary.cs" />
-    <Compile Include="SummaryCollection.cs" />
+    <Compile Include="WeeklySummaryCollection.cs" />
     <Compile Include="CourseSelector.cs">
       <SubType>UserControl</SubType>
     </Compile>
