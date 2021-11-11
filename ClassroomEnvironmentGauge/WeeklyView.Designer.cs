@@ -67,6 +67,7 @@ namespace ClassroomEnvironmentGauge {
             this.dailyView1.MinimumSize = new System.Drawing.Size(250, 125);
             this.dailyView1.Name = "dailyView1";
             this.dailyView1.Size = new System.Drawing.Size(250, 125);
+            this.dailyView1.Summary = null;
             this.dailyView1.TabIndex = 0;
             // 
             // dailyView2
@@ -81,6 +82,7 @@ namespace ClassroomEnvironmentGauge {
             this.dailyView2.MinimumSize = new System.Drawing.Size(250, 125);
             this.dailyView2.Name = "dailyView2";
             this.dailyView2.Size = new System.Drawing.Size(250, 125);
+            this.dailyView2.Summary = null;
             this.dailyView2.TabIndex = 1;
             // 
             // dailyView3
@@ -95,6 +97,7 @@ namespace ClassroomEnvironmentGauge {
             this.dailyView3.MinimumSize = new System.Drawing.Size(250, 125);
             this.dailyView3.Name = "dailyView3";
             this.dailyView3.Size = new System.Drawing.Size(250, 125);
+            this.dailyView3.Summary = null;
             this.dailyView3.TabIndex = 2;
             // 
             // dailyView4
@@ -109,6 +112,7 @@ namespace ClassroomEnvironmentGauge {
             this.dailyView4.MinimumSize = new System.Drawing.Size(250, 125);
             this.dailyView4.Name = "dailyView4";
             this.dailyView4.Size = new System.Drawing.Size(250, 125);
+            this.dailyView4.Summary = null;
             this.dailyView4.TabIndex = 3;
             // 
             // dailyView5
@@ -123,6 +127,7 @@ namespace ClassroomEnvironmentGauge {
             this.dailyView5.MinimumSize = new System.Drawing.Size(250, 125);
             this.dailyView5.Name = "dailyView5";
             this.dailyView5.Size = new System.Drawing.Size(250, 125);
+            this.dailyView5.Summary = null;
             this.dailyView5.TabIndex = 4;
             // 
             // WeeklyView

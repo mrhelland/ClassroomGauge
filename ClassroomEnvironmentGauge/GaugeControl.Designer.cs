@@ -30,8 +30,10 @@ namespace ClassroomEnvironmentGauge {
             // 
             // pbGauge
             // 
+            this.pbGauge.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pbGauge.BackColor = System.Drawing.Color.Transparent;
-            this.pbGauge.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbGauge.Location = new System.Drawing.Point(0, 0);
             this.pbGauge.Name = "pbGauge";
             this.pbGauge.Size = new System.Drawing.Size(790, 422);
@@ -39,13 +41,13 @@ namespace ClassroomEnvironmentGauge {
             this.pbGauge.TabIndex = 0;
             this.pbGauge.TabStop = false;
             // 
-            // UserControl1
+            // GaugeControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.pbGauge);
-            this.Name = "UserControl1";
+            this.Name = "GaugeControl";
             this.Size = new System.Drawing.Size(790, 422);
             ((System.ComponentModel.ISupportInitialize)(this.pbGauge)).EndInit();
             this.ResumeLayout(false);

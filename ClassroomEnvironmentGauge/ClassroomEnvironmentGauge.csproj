@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassExtensions.cs" />
+    <Compile Include="CourseEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CourseEditor.Designer.cs">
+      <DependentUpon>CourseEditor.cs</DependentUpon>
+    </Compile>
     <Compile Include="CourseSection.cs" />
     <Compile Include="DailyView.cs">
       <SubType>UserControl</SubType>
@@ -90,6 +96,9 @@
     <Compile Include="WeekSelector.Designer.cs">
       <DependentUpon>WeekSelector.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CourseEditor.resx">
+      <DependentUpon>CourseEditor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DailyView.resx">
       <DependentUpon>DailyView.cs</DependentUpon>
     </EmbeddedResource>
@@ -118,6 +127,7 @@
     <EmbeddedResource Include="WeekSelector.resx">
       <DependentUpon>WeekSelector.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\CourseSection.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

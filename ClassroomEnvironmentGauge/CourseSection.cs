@@ -50,12 +50,27 @@ namespace ClassroomEnvironmentGauge {
             return sections;
         }
 
+        public static void SetCourses(List<CourseSection> courseList) {
+            StringCollection sc = new StringCollection();
+
+            foreach(CourseSection c in courseList) {
+                string temp = c.period.ToString() + "|" + c.name;
+                sc.Add(temp);
+            }
+            Properties.Settings.Default.CourseList = sc;
+            Properties.Settings.Default.Save();
+        }
+
         public override string ToString() {
             return "Per " + period.ToString() + " - " + name;
         }
 
         public override int GetHashCode() {
-            return (period.ToString() + name.ToLower().Trim()).GetHashCode();
+            if(name != null) {
+                return (period.ToString() + name.ToLower().Trim()).GetHashCode();
+            } else {
+                return period.ToString().GetHashCode();
+            }
         }
 
         public override bool Equals(object obj) {

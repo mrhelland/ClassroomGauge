@@ -53,15 +53,13 @@ namespace ClassroomEnvironmentGauge {
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(250, 120);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(208, 100);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // ctrlGauge
             // 
-            this.ctrlGauge.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.ctrlGauge.BackColor = System.Drawing.Color.Transparent;
+            this.ctrlGauge.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ctrlGauge.Enabled = false;
             this.ctrlGauge.ImageCount = 80;
             this.ctrlGauge.Location = new System.Drawing.Point(35, 3);
@@ -69,7 +67,7 @@ namespace ClassroomEnvironmentGauge {
             this.ctrlGauge.MinValue = 0F;
             this.ctrlGauge.Name = "ctrlGauge";
             this.tableLayoutPanel1.SetRowSpan(this.ctrlGauge, 2);
-            this.ctrlGauge.Size = new System.Drawing.Size(218, 114);
+            this.ctrlGauge.Size = new System.Drawing.Size(172, 94);
             this.ctrlGauge.TabIndex = 0;
             this.ctrlGauge.Value = 100F;
             // 
@@ -83,7 +81,7 @@ namespace ClassroomEnvironmentGauge {
             this.lblDayOfWeek.Location = new System.Drawing.Point(0, 0);
             this.lblDayOfWeek.Margin = new System.Windows.Forms.Padding(0);
             this.lblDayOfWeek.Name = "lblDayOfWeek";
-            this.lblDayOfWeek.Size = new System.Drawing.Size(32, 30);
+            this.lblDayOfWeek.Size = new System.Drawing.Size(32, 25);
             this.lblDayOfWeek.TabIndex = 5;
             this.lblDayOfWeek.Text = "M";
             this.lblDayOfWeek.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -95,10 +93,10 @@ namespace ClassroomEnvironmentGauge {
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDate.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.White;
-            this.lblDate.Location = new System.Drawing.Point(0, 30);
+            this.lblDate.Location = new System.Drawing.Point(0, 25);
             this.lblDate.Margin = new System.Windows.Forms.Padding(0);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(32, 90);
+            this.lblDate.Size = new System.Drawing.Size(32, 75);
             this.lblDate.TabIndex = 10;
             this.lblDate.Text = "28";
             this.lblDate.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -109,9 +107,9 @@ namespace ClassroomEnvironmentGauge {
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.tableLayoutPanel1);
-            this.MinimumSize = new System.Drawing.Size(250, 120);
+            this.MinimumSize = new System.Drawing.Size(200, 100);
             this.Name = "DailyView";
-            this.Size = new System.Drawing.Size(250, 120);
+            this.Size = new System.Drawing.Size(208, 100);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
