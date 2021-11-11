@@ -54,6 +54,18 @@
       <DependentUpon>CourseEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="CourseSection.cs" />
+    <Compile Include="CoursesView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CoursesView.Designer.cs">
+      <DependentUpon>CoursesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateNewWeek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateNewWeek.Designer.cs">
+      <DependentUpon>CreateNewWeek.cs</DependentUpon>
+    </Compile>
     <Compile Include="DailyView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -98,6 +110,12 @@
     </Compile>
     <EmbeddedResource Include="CourseEditor.resx">
       <DependentUpon>CourseEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CoursesView.resx">
+      <DependentUpon>CoursesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateNewWeek.resx">
+      <DependentUpon>CreateNewWeek.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DailyView.resx">
       <DependentUpon>DailyView.cs</DependentUpon>

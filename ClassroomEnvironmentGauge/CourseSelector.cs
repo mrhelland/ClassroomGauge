@@ -11,9 +11,11 @@ using System.Windows.Forms;
 namespace ClassroomEnvironmentGauge {
     public partial class CourseSelector : UserControl {
 
-
-
         private List<CourseSection> sections;
+        public List<CourseSection> Sections {
+            get => sections;
+            set => sections = value;
+        }
 
         private CourseSection selected;
         public CourseSection Selected {
@@ -56,9 +58,7 @@ namespace ClassroomEnvironmentGauge {
 
         protected virtual void OnCourseSelectionChanged(EventArgs e) {
             EventHandler raiseEvent = CourseSelectionChanged;
-            if(raiseEvent != null) {
-                raiseEvent(this, e);
-            }
+            raiseEvent?.Invoke(this, e);
         }
 
 
