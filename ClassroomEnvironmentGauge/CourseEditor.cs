@@ -11,13 +11,10 @@ using System.Windows.Forms;
 namespace ClassroomEnvironmentGauge {
     public partial class CourseEditor : Form {
 
-        private List<CourseSection> courses;
 
         public CourseEditor() {
-            courses = CourseSection.GetCourses();
             InitializeComponent();
-            this.bsCourses.DataSource = courses;
-            this.dgvCourses.DataSource = this.bsCourses;
+            this.courseView.Courses = CourseSection.GetCourses();
         }
 
         private void CourseEditor_Load(object sender, EventArgs e) {
@@ -29,8 +26,7 @@ namespace ClassroomEnvironmentGauge {
         }
 
         private void btnSave_Click(object sender, EventArgs e) {
-            courses.Sort((CourseSection A, CourseSection B) => A.Period.CompareTo(B.Period));
-            CourseSection.SetCourses(courses);
+            courseView.SaveChanges();
             this.Close();
         }
     }

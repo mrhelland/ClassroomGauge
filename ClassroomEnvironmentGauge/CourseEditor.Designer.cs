@@ -24,54 +24,13 @@ namespace ClassroomEnvironmentGauge {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.components = new System.ComponentModel.Container();
-            this.dgvCourses = new System.Windows.Forms.DataGridView();
-            this.Period = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CourseName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bsCourses = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCourses)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsCourses)).BeginInit();
+            this.courseView = new ClassroomEnvironmentGauge.CoursesView();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // dgvCourses
-            // 
-            this.dgvCourses.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvCourses.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dgvCourses.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvCourses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCourses.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Period,
-            this.CourseName});
-            this.dgvCourses.Location = new System.Drawing.Point(13, 37);
-            this.dgvCourses.Name = "dgvCourses";
-            this.dgvCourses.Size = new System.Drawing.Size(414, 263);
-            this.dgvCourses.TabIndex = 0;
-            // 
-            // Period
-            // 
-            this.Period.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Period.DataPropertyName = "Period";
-            this.Period.HeaderText = "Period";
-            this.Period.MaxInputLength = 4;
-            this.Period.MinimumWidth = 30;
-            this.Period.Name = "Period";
-            this.Period.Width = 50;
-            // 
-            // CourseName
-            // 
-            this.CourseName.DataPropertyName = "Name";
-            this.CourseName.HeaderText = "Course Name";
-            this.CourseName.MaxInputLength = 100;
-            this.CourseName.MinimumWidth = 100;
-            this.CourseName.Name = "CourseName";
-            this.CourseName.Width = 300;
             // 
             // tableLayoutPanel1
             // 
@@ -126,21 +85,28 @@ namespace ClassroomEnvironmentGauge {
             this.label1.TabIndex = 2;
             this.label1.Text = "Add or edit courses below:";
             // 
+            // courseView
+            // 
+            this.courseView.Courses = null;
+            this.courseView.Location = new System.Drawing.Point(13, 30);
+            this.courseView.Name = "courseView";
+            this.courseView.ReadOnly = false;
+            this.courseView.Size = new System.Drawing.Size(414, 270);
+            this.courseView.TabIndex = 3;
+            // 
             // CourseEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(439, 362);
+            this.Controls.Add(this.courseView);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.dgvCourses);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "CourseEditor";
             this.Text = "Edit Course List";
             this.Load += new System.EventHandler(this.CourseEditor_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCourses)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsCourses)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -148,14 +114,10 @@ namespace ClassroomEnvironmentGauge {
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgvCourses;
-        private System.Windows.Forms.BindingSource bsCourses;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Period;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CourseName;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label label1;
+        private CoursesView courseView;
     }
 }
