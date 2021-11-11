@@ -11,31 +11,24 @@ using System.Windows.Forms;
 namespace ClassroomEnvironmentGauge {
     public partial class WeeklyView : UserControl {
 
-        private DateTime startDate;
-        public DateTime StartDate {
-            get => startDate;
+        private WeeklySummary summary;
+        public WeeklySummary Summary {
+            get => summary;
             set {
-                startDate = value;
-
+                summary = value;
+                UpdateView();
             }
         }
 
-        private CourseSection section;
-        public CourseSection Section {
-            get => section;
-            set => section = value;
-        }
 
- 
         public WeeklyView() {
-            startDate = DateTime.MinValue;
             InitializeComponent();
         }
 
+
+
         private void UpdateView() {
-            if(startDate == DateTime.MinValue) {
-                
-            }
+
         }
 
 
