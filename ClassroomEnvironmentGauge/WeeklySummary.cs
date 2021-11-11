@@ -9,16 +9,18 @@ namespace ClassroomEnvironmentGauge {
     [Serializable()]
     public class WeeklySummary {
 
-        private SortedList<DateTime, DailySummary> dailySummaries;
-        public SortedList<DateTime, DailySummary> DailySummaries {
+        public enum Days {
+            Monday = 0,
+            Tuesday = 1,
+            Wednesday = 2,
+            Thursday = 3,
+            Friday = 4
+        };
+
+        private DailySummary[] dailySummaries = new DailySummary[5];
+        public DailySummary[] DailySummaries {
             get => dailySummaries;
             set => dailySummaries = value;
-        }
-
-        private DateTime startDate;
-        public DateTime StartDate {
-            get => startDate;
-            set => startDate = value;
         }
 
         private CourseSection courseSection;
@@ -28,27 +30,33 @@ namespace ClassroomEnvironmentGauge {
         }
 
         public WeeklySummary() {
-            dailySummaries = new SortedList<DateTime, DailySummary>();
-            startDate = DateTime.MinValue;
+            this.courseSection = null;
         }
 
         public WeeklySummary(DateTime includes, CourseSection course) {
             this.courseSection = course;
             DateTime currentday = includes.StartOfWeek(DayOfWeek.Monday);
             for(int i = 0; i < 5; i++) {
-                dailySummaries.Add(currentday, new DailySummary());
-                currentday = currentday.AddDays(1);                
+                dailySummaries[i] = new DailySummary(currentday);
+                currentday = currentday.AddDays(1);
             }
         }
 
         public override string ToString() {
-            return courseSection.ToString() + " - Week of " + startDate.ToShortDateString();
+            return courseSection.ToString() + " - Week of " + GetStartDate().ToShortDateString();
+        }
+
+        public DateTime GetStartDate() {
+            if(dailySummaries[0] == null) {
+                return DateTime.MinValue;
+            }
+            return dailySummaries[0].Date;
         }
 
         public override bool Equals(object obj) {
             WeeklySummary ws = obj as WeeklySummary;
             if(ws != null) {
-                if(ws.startDate == this.startDate && ws.courseSection.Equals(this.courseSection)) {
+                if(ws.GetStartDate() == this.GetStartDate() && ws.courseSection.Equals(this.courseSection)) {
                     return true;
                 }
             }

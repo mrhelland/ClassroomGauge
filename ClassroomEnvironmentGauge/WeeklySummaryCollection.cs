@@ -8,6 +8,7 @@ using System.IO;
 
 namespace ClassroomEnvironmentGauge {
 
+    [Serializable()]
     public class WeeklySummaryCollection {
 
         private List<WeeklySummary> weeklySummaries;

@@ -24,8 +24,20 @@ namespace ClassroomEnvironmentGauge {
             set => date = value;
         }
 
+        private bool isSchoolDay;
+        public bool IsSchoolDay {
+            get => isSchoolDay;
+            set => isSchoolDay = value;
+        }
+
         public DailySummary() {
             observations = new List<Observation>();
+        }
+
+        public DailySummary(DateTime date, bool isSchoolDay = true) {
+            observations = new List<Observation>();
+            this.date = date;
+            this.isSchoolDay = isSchoolDay;
         }
 
         public float GetTotalValue() {
