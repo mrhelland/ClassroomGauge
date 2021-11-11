@@ -103,9 +103,7 @@
             this.weeklyView1.Location = new System.Drawing.Point(813, 45);
             this.weeklyView1.MinimumSize = new System.Drawing.Size(200, 500);
             this.weeklyView1.Name = "weeklyView1";
-            this.weeklyView1.Section = null;
             this.weeklyView1.Size = new System.Drawing.Size(250, 600);
-            this.weeklyView1.StartDate = new System.DateTime(((long)(0)));
             this.weeklyView1.TabIndex = 4;
             // 
             // courseSelector1
