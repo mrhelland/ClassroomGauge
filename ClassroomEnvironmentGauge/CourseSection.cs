@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ClassroomEnvironmentGauge {
+
+    [Serializable()]
     public class CourseSection {
         
         private string name;

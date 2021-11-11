@@ -16,6 +16,9 @@ using System.IO;
 namespace ClassroomEnvironmentGauge {
     public partial class MainForm : Form {
 
+        private WeeklySummaryCollection summaryCollection;
+
+
         public MainForm() {
             InitializeComponent();
         }
