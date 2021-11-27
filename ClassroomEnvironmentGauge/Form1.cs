@@ -17,9 +17,12 @@ namespace ClassroomEnvironmentGauge {
     public partial class MainForm : Form {
 
         private WeeklySummaryCollection summaryCollection;
+        private FileInfo currentFile;
 
 
         public MainForm() {
+            summaryCollection = null;
+            currentFile = null;
             InitializeComponent();
         }
 
@@ -52,6 +55,12 @@ namespace ClassroomEnvironmentGauge {
         private void button1_Click(object sender, EventArgs e) {
             CourseEditor ce = new CourseEditor();
             ce.ShowDialog();
+        }
+
+        private void miNew_Click(object sender, EventArgs e) {
+            CreateNewWeek cnw = new CreateNewWeek();
+            cnw.ShowDialog();
+
         }
     }
 }

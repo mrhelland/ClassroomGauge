@@ -43,7 +43,7 @@ namespace ClassroomEnvironmentGauge {
             this.cbCourses.FormattingEnabled = true;
             this.cbCourses.Location = new System.Drawing.Point(3, 3);
             this.cbCourses.Name = "cbCourses";
-            this.cbCourses.Size = new System.Drawing.Size(886, 27);
+            this.cbCourses.Size = new System.Drawing.Size(398, 27);
             this.cbCourses.TabIndex = 0;
             this.cbCourses.SelectedIndexChanged += new System.EventHandler(this.cbCourses_SelectedIndexChanged);
             // 
@@ -64,7 +64,7 @@ namespace ClassroomEnvironmentGauge {
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(892, 108);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(404, 108);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // lblPeriod
@@ -78,7 +78,7 @@ namespace ClassroomEnvironmentGauge {
             this.lblPeriod.Location = new System.Drawing.Point(67, 70);
             this.lblPeriod.MinimumSize = new System.Drawing.Size(120, 32);
             this.lblPeriod.Name = "lblPeriod";
-            this.lblPeriod.Size = new System.Drawing.Size(822, 38);
+            this.lblPeriod.Size = new System.Drawing.Size(334, 38);
             this.lblPeriod.TabIndex = 4;
             this.lblPeriod.Text = "No Course Selected";
             this.lblPeriod.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -94,7 +94,7 @@ namespace ClassroomEnvironmentGauge {
             this.lblCourseName.Location = new System.Drawing.Point(67, 32);
             this.lblCourseName.MinimumSize = new System.Drawing.Size(120, 24);
             this.lblCourseName.Name = "lblCourseName";
-            this.lblCourseName.Size = new System.Drawing.Size(822, 38);
+            this.lblCourseName.Size = new System.Drawing.Size(334, 38);
             this.lblCourseName.TabIndex = 3;
             this.lblCourseName.Text = "No Course Selected";
             this.lblCourseName.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -138,7 +138,7 @@ namespace ClassroomEnvironmentGauge {
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "CourseSelector";
-            this.Size = new System.Drawing.Size(892, 108);
+            this.Size = new System.Drawing.Size(404, 108);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

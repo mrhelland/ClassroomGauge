@@ -46,6 +46,7 @@ namespace ClassroomEnvironmentGauge {
             this.dgvCourses.Name = "dgvCourses";
             this.dgvCourses.Size = new System.Drawing.Size(493, 405);
             this.dgvCourses.TabIndex = 1;
+            this.dgvCourses.SelectionChanged += new System.EventHandler(this.dgvCourses_SelectionChanged);
             // 
             // Period
             // 

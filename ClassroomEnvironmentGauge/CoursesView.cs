@@ -30,6 +30,13 @@ namespace ClassroomEnvironmentGauge {
             }
         }
 
+        private bool allowSelection = true;
+        public bool AllowSelection {
+            get => allowSelection;
+            set => allowSelection = value;
+        }
+
+
         public CoursesView() {
             InitializeComponent();
         }
@@ -39,6 +46,11 @@ namespace ClassroomEnvironmentGauge {
             CourseSection.SetCourses(courses);
         }
 
-
+        private void dgvCourses_SelectionChanged(object sender, EventArgs e) {
+            if(!this.allowSelection) {
+                dgvCourses.ClearSelection();
+            }
+            
+        }
     }
 }
