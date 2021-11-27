@@ -9,14 +9,6 @@ namespace ClassroomEnvironmentGauge {
     [Serializable()]
     public class WeeklySummary {
 
-        public enum Days {
-            Monday = 0,
-            Tuesday = 1,
-            Wednesday = 2,
-            Thursday = 3,
-            Friday = 4
-        };
-
         private DailySummary[] dailySummaries = new DailySummary[5];
         public DailySummary[] DailySummaries {
             get => dailySummaries;
@@ -33,11 +25,17 @@ namespace ClassroomEnvironmentGauge {
             this.courseSection = null;
         }
 
-        public WeeklySummary(DateTime includes, CourseSection course) {
+        public WeeklySummary(DateTime includes, CourseSection course) : this(includes, course, null) { }
+
+        public WeeklySummary(DateTime includes, CourseSection course, List<DayOfWeek> activeDays) {
             this.courseSection = course;
             DateTime currentday = includes.StartOfWeek(DayOfWeek.Monday);
             for(int i = 0; i < 5; i++) {
-                dailySummaries[i] = new DailySummary(currentday);
+                if(activeDays is null || activeDays.Contains(currentday.DayOfWeek)) {
+                    dailySummaries[i] = new DailySummary(currentday);
+                } else {
+                    dailySummaries[i] = null;
+                }
                 currentday = currentday.AddDays(1);
             }
         }

@@ -27,6 +27,7 @@ namespace ClassroomEnvironmentGauge {
             set { 
                 isReadOnly = value;
                 dgvCourses.ReadOnly = isReadOnly;
+                dgvCourses.AllowUserToAddRows = !isReadOnly;
             }
         }
 
@@ -36,14 +37,35 @@ namespace ClassroomEnvironmentGauge {
             set => allowSelection = value;
         }
 
+        public List<CourseSection> SelectedCourses {
+            get {
+                List<CourseSection> temp = new List<CourseSection>();
+                
+                foreach(DataGridViewRow dgvr in dgvCourses.SelectedRows) {
+                    CourseSection cs = (CourseSection)(dgvr.DataBoundItem);
+                    temp.Add(cs);
+                }
+                return temp;
+            }
+        }
+
 
         public CoursesView() {
             InitializeComponent();
+            dgvCourses.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
         public void SaveChanges() {
             courses.Sort((CourseSection A, CourseSection B) => A.Period.CompareTo(B.Period));
             CourseSection.SetCourses(courses);
+        }
+
+        public void SelectAll() {
+            dgvCourses.SelectAll();
+        }
+
+        public void SelectNone() {
+            dgvCourses.ClearSelection();
         }
 
         private void dgvCourses_SelectionChanged(object sender, EventArgs e) {

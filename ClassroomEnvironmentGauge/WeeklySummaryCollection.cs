@@ -52,14 +52,20 @@ namespace ClassroomEnvironmentGauge {
         }
 
         public bool AddNewCourseSummary(CourseSection course) {
+            return AddNewCourseSummary(course, null);
+        }
+
+        public bool AddNewCourseSummary(CourseSection course, List<DayOfWeek> activeDays) {
             foreach(WeeklySummary ws in weeklySummaries) {
                 if(ws.CourseSection.Equals(course)) {
                     return false;
                 }
             }
-            weeklySummaries.Add(new WeeklySummary(this.startDate, course));
+            weeklySummaries.Add(new WeeklySummary(this.startDate, course, activeDays));
             return true;
         }
+
+
 
     }
 }
