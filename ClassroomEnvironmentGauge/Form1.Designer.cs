@@ -35,6 +35,7 @@
             this.weeklyView1 = new ClassroomEnvironmentGauge.WeeklyView();
             this.courseSelector1 = new ClassroomEnvironmentGauge.CourseSelector();
             this.gaugeControl1 = new ClassroomEnvironmentGauge.GaugeControl();
+            this.button2 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -145,12 +146,23 @@
             this.gaugeControl1.TabIndex = 0;
             this.gaugeControl1.Value = 100F;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(625, 45);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1075, 601);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.weeklyView1);
             this.Controls.Add(this.courseSelector1);
@@ -181,6 +193,7 @@
         private System.Windows.Forms.ToolStripMenuItem miExit;
         private WeeklyView weeklyView1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 

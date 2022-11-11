@@ -65,6 +65,11 @@ namespace ClassroomEnvironmentGauge {
             return true;
         }
 
+        public bool AddCourseSummary(WeeklySummary summary) {
+            weeklySummaries.Add(summary);
+            return true;
+        }
+
 
 
     }

@@ -30,16 +30,16 @@ namespace ClassroomEnvironmentGauge {
             this.btnOtherWeekAllCourses = new System.Windows.Forms.Button();
             this.btnThisWeekSomeCourses = new System.Windows.Forms.Button();
             this.btnThisWeekAllCourses = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.chkMon = new System.Windows.Forms.CheckBox();
-            this.chkTue = new System.Windows.Forms.CheckBox();
-            this.chkWed = new System.Windows.Forms.CheckBox();
-            this.chkThu = new System.Windows.Forms.CheckBox();
-            this.chkFri = new System.Windows.Forms.CheckBox();
-            this.btnCreate = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.cvCourses = new ClassroomEnvironmentGauge.CoursesView();
+            this.btnCreate = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.chkFri = new System.Windows.Forms.CheckBox();
+            this.chkThu = new System.Windows.Forms.CheckBox();
+            this.chkWed = new System.Windows.Forms.CheckBox();
+            this.chkTue = new System.Windows.Forms.CheckBox();
+            this.chkMon = new System.Windows.Forms.CheckBox();
             this.dtpStartDate = new ClassroomEnvironmentGauge.SizableDateTimePicker();
+            this.cvCourses = new ClassroomEnvironmentGauge.CoursesView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -152,6 +152,26 @@ namespace ClassroomEnvironmentGauge {
             this.btnThisWeekAllCourses.UseVisualStyleBackColor = false;
             this.btnThisWeekAllCourses.Click += new System.EventHandler(this.btnThisWeekAllCourses_Click);
             // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(496, 520);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(95, 47);
+            this.btnCancel.TabIndex = 4;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnCreate
+            // 
+            this.btnCreate.Location = new System.Drawing.Point(395, 520);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(95, 47);
+            this.btnCreate.TabIndex = 3;
+            this.btnCreate.Text = "Create";
+            this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -173,8 +193,76 @@ namespace ClassroomEnvironmentGauge {
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(595, 100);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(594, 100);
             this.tableLayoutPanel1.TabIndex = 2;
+            // 
+            // chkFri
+            // 
+            this.chkFri.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkFri.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkFri.Checked = true;
+            this.chkFri.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkFri.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkFri.Location = new System.Drawing.Point(475, 53);
+            this.chkFri.Name = "chkFri";
+            this.chkFri.Padding = new System.Windows.Forms.Padding(12, 4, 12, 4);
+            this.chkFri.Size = new System.Drawing.Size(116, 44);
+            this.chkFri.TabIndex = 6;
+            this.chkFri.Text = "Fri";
+            this.chkFri.UseVisualStyleBackColor = true;
+            // 
+            // chkThu
+            // 
+            this.chkThu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkThu.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkThu.Checked = true;
+            this.chkThu.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkThu.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkThu.Location = new System.Drawing.Point(357, 53);
+            this.chkThu.Name = "chkThu";
+            this.chkThu.Padding = new System.Windows.Forms.Padding(12, 4, 12, 4);
+            this.chkThu.Size = new System.Drawing.Size(112, 44);
+            this.chkThu.TabIndex = 5;
+            this.chkThu.Text = "Thu";
+            this.chkThu.UseVisualStyleBackColor = true;
+            // 
+            // chkWed
+            // 
+            this.chkWed.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkWed.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkWed.Checked = true;
+            this.chkWed.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkWed.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkWed.Location = new System.Drawing.Point(239, 53);
+            this.chkWed.Name = "chkWed";
+            this.chkWed.Padding = new System.Windows.Forms.Padding(12, 4, 12, 4);
+            this.chkWed.Size = new System.Drawing.Size(112, 44);
+            this.chkWed.TabIndex = 4;
+            this.chkWed.Text = "Wed";
+            this.chkWed.UseVisualStyleBackColor = true;
+            // 
+            // chkTue
+            // 
+            this.chkTue.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkTue.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkTue.Checked = true;
+            this.chkTue.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkTue.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkTue.Location = new System.Drawing.Point(121, 53);
+            this.chkTue.Name = "chkTue";
+            this.chkTue.Padding = new System.Windows.Forms.Padding(12, 4, 12, 4);
+            this.chkTue.Size = new System.Drawing.Size(112, 44);
+            this.chkTue.TabIndex = 3;
+            this.chkTue.Text = "Tue";
+            this.chkTue.UseVisualStyleBackColor = true;
             // 
             // chkMon
             // 
@@ -188,98 +276,23 @@ namespace ClassroomEnvironmentGauge {
             this.chkMon.Location = new System.Drawing.Point(3, 53);
             this.chkMon.Name = "chkMon";
             this.chkMon.Padding = new System.Windows.Forms.Padding(12, 4, 12, 4);
-            this.chkMon.Size = new System.Drawing.Size(113, 44);
+            this.chkMon.Size = new System.Drawing.Size(112, 44);
             this.chkMon.TabIndex = 2;
             this.chkMon.Text = "Mon";
             this.chkMon.UseVisualStyleBackColor = true;
             // 
-            // chkTue
+            // dtpStartDate
             // 
-            this.chkTue.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dtpStartDate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.chkTue.Appearance = System.Windows.Forms.Appearance.Button;
-            this.chkTue.Checked = true;
-            this.chkTue.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkTue.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkTue.Location = new System.Drawing.Point(122, 53);
-            this.chkTue.Name = "chkTue";
-            this.chkTue.Padding = new System.Windows.Forms.Padding(12, 4, 12, 4);
-            this.chkTue.Size = new System.Drawing.Size(113, 44);
-            this.chkTue.TabIndex = 3;
-            this.chkTue.Text = "Tue";
-            this.chkTue.UseVisualStyleBackColor = true;
-            // 
-            // chkWed
-            // 
-            this.chkWed.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.chkWed.Appearance = System.Windows.Forms.Appearance.Button;
-            this.chkWed.Checked = true;
-            this.chkWed.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkWed.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkWed.Location = new System.Drawing.Point(241, 53);
-            this.chkWed.Name = "chkWed";
-            this.chkWed.Padding = new System.Windows.Forms.Padding(12, 4, 12, 4);
-            this.chkWed.Size = new System.Drawing.Size(113, 44);
-            this.chkWed.TabIndex = 4;
-            this.chkWed.Text = "Wed";
-            this.chkWed.UseVisualStyleBackColor = true;
-            // 
-            // chkThu
-            // 
-            this.chkThu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.chkThu.Appearance = System.Windows.Forms.Appearance.Button;
-            this.chkThu.Checked = true;
-            this.chkThu.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkThu.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkThu.Location = new System.Drawing.Point(360, 53);
-            this.chkThu.Name = "chkThu";
-            this.chkThu.Padding = new System.Windows.Forms.Padding(12, 4, 12, 4);
-            this.chkThu.Size = new System.Drawing.Size(113, 44);
-            this.chkThu.TabIndex = 5;
-            this.chkThu.Text = "Thu";
-            this.chkThu.UseVisualStyleBackColor = true;
-            // 
-            // chkFri
-            // 
-            this.chkFri.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.chkFri.Appearance = System.Windows.Forms.Appearance.Button;
-            this.chkFri.Checked = true;
-            this.chkFri.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkFri.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkFri.Location = new System.Drawing.Point(479, 53);
-            this.chkFri.Name = "chkFri";
-            this.chkFri.Padding = new System.Windows.Forms.Padding(12, 4, 12, 4);
-            this.chkFri.Size = new System.Drawing.Size(113, 44);
-            this.chkFri.TabIndex = 6;
-            this.chkFri.Text = "Fri";
-            this.chkFri.UseVisualStyleBackColor = true;
-            // 
-            // btnCreate
-            // 
-            this.btnCreate.Location = new System.Drawing.Point(395, 520);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(95, 47);
-            this.btnCreate.TabIndex = 3;
-            this.btnCreate.Text = "Create";
-            this.btnCreate.UseVisualStyleBackColor = true;
-            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(496, 520);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(95, 47);
-            this.btnCancel.TabIndex = 4;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.dtpStartDate.CalendarFont = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tableLayoutPanel1.SetColumnSpan(this.dtpStartDate, 5);
+            this.dtpStartDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpStartDate.Location = new System.Drawing.Point(3, 3);
+            this.dtpStartDate.Name = "dtpStartDate";
+            this.dtpStartDate.Size = new System.Drawing.Size(588, 29);
+            this.dtpStartDate.TabIndex = 7;
             // 
             // cvCourses
             // 
@@ -292,21 +305,8 @@ namespace ClassroomEnvironmentGauge {
             this.cvCourses.Location = new System.Drawing.Point(3, 145);
             this.cvCourses.Name = "cvCourses";
             this.cvCourses.ReadOnly = false;
-            this.cvCourses.Size = new System.Drawing.Size(595, 369);
+            this.cvCourses.Size = new System.Drawing.Size(594, 369);
             this.cvCourses.TabIndex = 0;
-            // 
-            // dtpStartDate
-            // 
-            this.dtpStartDate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpStartDate.CalendarFont = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel1.SetColumnSpan(this.dtpStartDate, 5);
-            this.dtpStartDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpStartDate.Location = new System.Drawing.Point(3, 3);
-            this.dtpStartDate.Name = "dtpStartDate";
-            this.dtpStartDate.Size = new System.Drawing.Size(589, 29);
-            this.dtpStartDate.TabIndex = 7;
             // 
             // CreateNewWeek
             // 

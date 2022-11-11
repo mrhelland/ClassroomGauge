@@ -11,6 +11,13 @@ using System.Windows.Forms;
 namespace ClassroomEnvironmentGauge {
     public partial class CreateNewWeek : Form {
 
+        private WeeklySummaryCollection collection = null;
+
+        public WeeklySummaryCollection Collection {
+            get => collection;
+            set => collection = value;
+        }
+
         public CreateNewWeek() {
             InitializeComponent();
             cvCourses.ReadOnly = true;
@@ -99,7 +106,16 @@ namespace ClassroomEnvironmentGauge {
         }
 
         private void btnCreate_Click(object sender, EventArgs e) {
-
+            WeeklySummaryCollection wsc = new WeeklySummaryCollection(dtpStartDate.Value);
+         
+            List<DayOfWeek> activedays = GetSelectedDays();
+            foreach(CourseSection c in cvCourses.SelectedCourses) {
+                WeeklySummary ws = new WeeklySummary(dtpStartDate.Value, c, activedays);
+                wsc.AddCourseSummary(ws);
+            }
+            collection = wsc;
+            this.DialogResult = DialogResult.Yes;
+            this.Close();
         }
 
         private void SetCheckBoxesEnabled(bool isEnabled) {

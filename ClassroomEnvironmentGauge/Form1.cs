@@ -62,5 +62,14 @@ namespace ClassroomEnvironmentGauge {
             cnw.ShowDialog();
 
         }
+
+        private void button2_Click(object sender, EventArgs e) {
+            CreateNewWeek cnw = new CreateNewWeek();
+            DialogResult result = cnw.ShowDialog();
+            if(result == DialogResult.Yes || result == DialogResult.OK) {
+                summaryCollection = cnw.Collection;                
+            }
+
+        }
     }
 }
